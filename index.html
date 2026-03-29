@@ -45,6 +45,10 @@ overflow-x: hidden;
 width: 100%;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
 body {
 font-family: 'Plus Jakarta Sans', sans-serif;
 background: var(--white);
@@ -451,11 +455,12 @@ grid-template-columns: 1fr 1fr 1fr;
 gap: 16px;
 }
 .perk-card {
-background: var(--white);
+background: rgba(255, 255, 255, 0.7);
 border-radius: 16px;
 padding: 28px 20px;
 text-align: center;
 border-top: 3px solid var(--pink);
+backdrop-filter: blur(10px);
 }
 .perk-card h4 {
 font-size: 14px;
@@ -591,6 +596,39 @@ footer span { color: var(--pink); }
     <div class="about-item">
       <h4>Community Events</h4>
       <p>Meetups, gatherings, and experiences that bring us closer to God and each other.</p>
+    </div>
+  </div>
+</section>
+
+<section class="perks-section">
+  <div class="perks-inner">
+    <h2>Founding Member <em>Perks</em></h2>
+    <p class="perks-sub">Join now and get exclusive access from day one</p>
+    <div class="perks-grid">
+      <div class="perk-card">
+        <h4>Early Access</h4>
+        <p>Be the first to know about everything before anyone else</p>
+      </div>
+      <div class="perk-card">
+        <h4>Exclusive Content</h4>
+        <p>Devotionals, guides, and resources made just for founding members</p>
+      </div>
+      <div class="perk-card">
+        <h4>Private Community</h4>
+        <p>Access to our inner circle group chat and prayer network</p>
+      </div>
+      <div class="perk-card">
+        <h4>Free Events</h4>
+        <p>Complimentary tickets to our first community gatherings</p>
+      </div>
+      <div class="perk-card">
+        <h4>Your Voice Matters</h4>
+        <p>Help shape what Heavenly Besties becomes as we grow together</p>
+      </div>
+      <div class="perk-card">
+        <h4>Founding Title</h4>
+        <p>Forever recognized as an original member of the movement</p>
+      </div>
     </div>
   </div>
 </section>
