@@ -238,7 +238,7 @@ to { opacity: 1; transform: translateY(0); }
 /* ABOUT STRIP */
 .about-strip {
 padding: 60px 24px;
-background: var(--white);
+background: linear-gradient(to bottom, var(--white), var(--pink-faint));
 }
 
 .about-strip-inner {
@@ -272,209 +272,6 @@ line-height: 1.7;
 font-weight: 400;
 }
 
-/* SIGNUP SECTION */
-.signup-section {
-padding: 70px 24px;
-position: relative;
-background: var(--white);
-}
-
-.signup-centered {
-max-width: 480px;
-margin: 0 auto;
-}
-
-.feature-list {
-list-style: none;
-display: flex;
-flex-direction: column;
-gap: 12px;
-}
-
-.feature-list li {
-display: flex;
-align-items: center;
-gap: 12px;
-font-size: 14px;
-color: var(--gray-900);
-font-weight: 500;
-}
-
-.feature-dot {
-width: 8px;
-height: 8px;
-background: var(--pink);
-border-radius: 50%;
-flex-shrink: 0;
-}
-
-/* SIGNUP CARD */
-.signup-card {
-background: var(--white);
-border: 1px solid var(--gray-200);
-border-radius: 24px;
-padding: 36px 32px;
-position: relative;
-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
-}
-
-.founding-badge {
-display: inline-block;
-padding: 6px 16px;
-background: var(--pink);
-color: var(--white);
-border-radius: 100px;
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-margin-bottom: 16px;
-}
-
-.card-title {
-font-family: 'Playfair Display', serif;
-font-size: 28px;
-font-weight: 400;
-color: var(--black);
-margin-bottom: 4px;
-}
-
-.card-sub {
-font-size: 13px;
-color: var(--gray-400);
-margin-bottom: 24px;
-font-weight: 400;
-}
-
-.input-group {
-margin-bottom: 16px;
-}
-
-.input-group label {
-display: block;
-font-size: 12px;
-font-weight: 600;
-letter-spacing: 1px;
-text-transform: uppercase;
-color: var(--gray-600);
-margin-bottom: 8px;
-}
-
-.input-group input {
-width: 100%;
-padding: 15px 18px;
-border: 1.5px solid var(--gray-200);
-border-radius: 14px;
-font-family: 'Plus Jakarta Sans', sans-serif;
-font-size: 14px;
-font-weight: 400;
-color: var(--black);
-background: var(--gray-100);
-outline: none;
-transition: all 0.3s ease;
-}
-
-.input-group input::placeholder {
-color: #C0C0C0;
-font-weight: 300;
-}
-
-.input-group input:focus {
-border-color: var(--pink);
-background: var(--white);
-box-shadow: 0 0 0 4px rgba(255, 161, 223, 0.1);
-}
-
-.btn-submit {
-width: 100%;
-padding: 16px;
-background: var(--black);
-color: var(--white);
-border: none;
-border-radius: 14px;
-font-family: 'Plus Jakarta Sans', sans-serif;
-font-size: 14px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
-margin-top: 8px;
-letter-spacing: 0.3px;
-}
-
-.btn-submit:hover {
-background: var(--gray-900);
-transform: translateY(-1px);
-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.card-footer-text {
-text-align: center;
-font-size: 11px;
-color: var(--gray-400);
-margin-top: 18px;
-font-weight: 400;
-}
-
-/* Success state */
-.success { display: none; text-align: center; padding: 32px 0; }
-.success.show { display: block; }
-.success-heart {
-width: 64px; height: 64px;
-background: var(--pink-faint);
-border-radius: 50%;
-display: flex; align-items: center; justify-content: center;
-margin: 0 auto 20px;
-font-size: 28px;
-}
-.success h4 {
-font-family: 'Playfair Display', serif;
-font-size: 24px;
-color: var(--black);
-margin-bottom: 8px;
-}
-.success p {
-font-size: 14px;
-color: var(--gray-600);
-font-weight: 400;
-}
-.share-section {
-margin-top: 20px;
-padding-top: 20px;
-border-top: 1px solid var(--gray-200);
-}
-.share-section p {
-font-size: 13px;
-color: var(--gray-600);
-margin-bottom: 12px;
-font-weight: 500;
-}
-.share-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-padding: 10px 24px;
-background: var(--pink);
-color: var(--white);
-border: none;
-border-radius: 60px;
-font-family: 'Plus Jakarta Sans', sans-serif;
-font-size: 13px;
-font-weight: 600;
-cursor: pointer;
-text-decoration: none;
-transition: all 0.3s ease;
-}
-.share-btn:hover {
-opacity: 0.9;
-transform: translateY(-1px);
-}
-.share-copied {
-display: none;
-font-size: 12px;
-color: var(--pink);
-font-weight: 500;
-margin-top: 8px;
-}
 
 /* SCRIPTURE */
 .scripture-section {
@@ -612,8 +409,7 @@ font-weight: 400;
 /* BOTTOM */
 .bottom {
 padding: 56px 24px;
-background: var(--white);
-border-top: 1px solid var(--gray-200);
+background: linear-gradient(to bottom, var(--pink-faint), var(--white));
 text-align: center;
 }
 
@@ -664,7 +460,6 @@ footer {
 padding: 24px;
 text-align: center;
 background: var(--white);
-border-top: 1px solid var(--gray-200);
 font-size: 11px;
 color: var(--gray-400);
 letter-spacing: 1px;
@@ -675,8 +470,6 @@ footer span { color: var(--pink); }
 /* RESPONSIVE */
 @media (max-width: 768px) {
 .about-strip-inner { grid-template-columns: 1fr; }
-.signup-section { padding: 48px 24px; }
-.signup-card { padding: 32px 24px; }
 }
 </style>
 
@@ -718,34 +511,6 @@ footer span { color: var(--pink); }
       <h4>Community Events</h4>
       <p>Meetups, gatherings, and experiences that bring us closer to God and each other.</p>
     </div>
-  </div>
-</section>
-
-<section class="signup-section" id="join">
-  <div class="signup-centered">
-    <div class="signup-card">
-      <h3 class="card-title">Be a founding member</h3>
-      <p class="card-sub">Join now and be part of the movement from day one</p>
-
-      <div id="formFields">
-        <div class="input-group">
-          <label>First Name</label>
-          <input type="text" id="nameInput" placeholder="Your first name">
-        </div>
-        <div class="input-group">
-          <label>Email Address</label>
-          <input type="email" id="emailInput" placeholder="your@email.com">
-        </div>
-        <button class="btn-submit" onclick="handleSignup()">Join the Movement</button>
-        <p class="card-footer-text">We respect your privacy. No spam, ever.</p>
-      </div>
-
-      <div class="success" id="successMsg">
-        <h4>Welcome, founding member</h4>
-        <p>You are officially part of the movement. We will let you know when we launch.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -806,58 +571,6 @@ document.getElementById('heroEmail').addEventListener('keypress', function(e) {
   if (e.key === 'Enter') handleHeroSignup();
 });
 
-async function handleSignup() {
-  var email = document.getElementById('emailInput').value;
-  var name = document.getElementById('nameInput').value;
-  var btn = document.querySelector('.btn-submit');
-
-  if (!name.trim()) {
-    document.getElementById('nameInput').style.borderColor = 'var(--pink)';
-    return;
-  }
-  if (!email || !email.includes('@') || !email.includes('.')) {
-    document.getElementById('emailInput').style.borderColor = 'var(--pink)';
-    return;
-  }
-
-  btn.textContent = 'Joining...';
-  btn.disabled = true;
-
-  try {
-    await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Y2jkNk', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
-      body: JSON.stringify({
-        data: {
-          type: 'subscription',
-          attributes: {
-            profile: {
-              data: {
-                type: 'profile',
-                attributes: {
-                  email: email,
-                  first_name: name,
-                  properties: { 'Source': 'Heavenly Besties Waitlist' }
-                }
-              }
-            },
-            custom_source: 'Heavenly Besties Website'
-          },
-          relationships: {
-            list: { data: { type: 'list', id: 'XZzFni' } }
-          }
-        }
-      })
-    });
-  } catch (e) {}
-
-  document.getElementById('formFields').style.display = 'none';
-  document.getElementById('successMsg').classList.add('show');
-}
-
-document.getElementById('emailInput').addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') handleSignup();
-});
 </script>
 
 </body>
