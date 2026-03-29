@@ -450,33 +450,41 @@ margin-bottom: 40px;
 font-weight: 400;
 }
 .perks-grid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 16px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 14px;
+max-width: 640px;
+margin: 0 auto;
 }
 .perk-card {
-background: rgba(255, 255, 255, 0.7);
-border-radius: 16px;
-padding: 28px 20px;
-text-align: center;
-border-top: 3px solid var(--pink);
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background: rgba(255, 255, 255, 0.8);
+border: 1.5px solid var(--pink-soft);
+border-radius: 100px;
+padding: 14px 28px;
 backdrop-filter: blur(10px);
+transition: all 0.3s ease;
+}
+.perk-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 24px rgba(255, 161, 223, 0.2);
+border-color: var(--pink);
+}
+.perk-icon {
+font-size: 18px;
+flex-shrink: 0;
 }
 .perk-card h4 {
 font-size: 14px;
-font-weight: 700;
+font-weight: 600;
 color: var(--black);
-margin-bottom: 8px;
+white-space: nowrap;
 }
 .perk-card p {
-font-size: 13px;
-color: var(--gray-600);
-line-height: 1.5;
-font-weight: 400;
-}
-
-@media (max-width: 768px) {
-.perks-grid { grid-template-columns: 1fr; }
+display: none;
 }
 
 /* BOTTOM */
@@ -605,30 +613,12 @@ footer span { color: var(--pink); }
     <h2>Founding Member <em>Perks</em></h2>
     <p class="perks-sub">Join now and get exclusive access from day one</p>
     <div class="perks-grid">
-      <div class="perk-card">
-        <h4>Early Access</h4>
-        <p>Be the first to know about everything before anyone else</p>
-      </div>
-      <div class="perk-card">
-        <h4>Exclusive Content</h4>
-        <p>Devotionals, guides, and resources made just for founding members</p>
-      </div>
-      <div class="perk-card">
-        <h4>Private Community</h4>
-        <p>Access to our inner circle group chat and prayer network</p>
-      </div>
-      <div class="perk-card">
-        <h4>Free Events</h4>
-        <p>Complimentary tickets to our first community gatherings</p>
-      </div>
-      <div class="perk-card">
-        <h4>Your Voice Matters</h4>
-        <p>Help shape what Heavenly Besties becomes as we grow together</p>
-      </div>
-      <div class="perk-card">
-        <h4>Founding Title</h4>
-        <p>Forever recognized as an original member of the movement</p>
-      </div>
+      <div class="perk-card"><span class="perk-icon">&#9889;</span><h4>Early Access</h4></div>
+      <div class="perk-card"><span class="perk-icon">&#10084;</span><h4>Exclusive Content</h4></div>
+      <div class="perk-card"><span class="perk-icon">&#9734;</span><h4>Private Community</h4></div>
+      <div class="perk-card"><span class="perk-icon">&#127881;</span><h4>Free Events</h4></div>
+      <div class="perk-card"><span class="perk-icon">&#128172;</span><h4>Your Voice Matters</h4></div>
+      <div class="perk-card"><span class="perk-icon">&#128081;</span><h4>Founding Title</h4></div>
     </div>
   </div>
 </section>
