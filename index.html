@@ -39,12 +39,17 @@
 --gray-100: #F5F5F5;
 }
 
+html, body {
+overflow-x: hidden;
+width: 100%;
+}
+
 body {
 font-family: 'Plus Jakarta Sans', sans-serif;
 background: var(--white);
 color: var(--black);
 -webkit-font-smoothing: antialiased;
-overflow-x: clip;
+position: relative;
 }
 
 /* HERO */
@@ -54,7 +59,7 @@ position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
-overflow: visible;
+overflow: hidden;
 background: linear-gradient(to bottom, var(--white), var(--white) 70%, var(--pink-faint));
 padding: 60px 0;
 }
