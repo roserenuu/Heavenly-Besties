@@ -157,9 +157,41 @@ opacity: 0;
 animation: revealUp 0.8s ease 0.2s forwards;
 }
 
-.hero-cta {
-display: inline-block;
-padding: 16px 40px;
+.hero-form {
+display: flex;
+gap: 10px;
+max-width: 440px;
+margin: 0 auto;
+opacity: 0;
+animation: revealUp 0.8s ease 0.3s forwards;
+}
+
+.hero-form input {
+flex: 1;
+padding: 16px 20px;
+border: 1.5px solid var(--gray-200);
+border-radius: 60px;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-size: 14px;
+font-weight: 400;
+color: var(--black);
+background: var(--white);
+outline: none;
+transition: all 0.3s ease;
+}
+
+.hero-form input::placeholder {
+color: #C0C0C0;
+font-weight: 300;
+}
+
+.hero-form input:focus {
+border-color: var(--pink);
+box-shadow: 0 0 0 4px rgba(255, 161, 223, 0.1);
+}
+
+.hero-form button {
+padding: 16px 32px;
 background: var(--pink);
 color: var(--white);
 border: none;
@@ -171,14 +203,31 @@ letter-spacing: 0.5px;
 cursor: pointer;
 text-decoration: none;
 transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-opacity: 0;
-animation: revealUp 0.8s ease 0.3s forwards;
+white-space: nowrap;
 }
 
-.hero-cta:hover {
+.hero-form button:hover {
 background: var(--pink-deep);
 transform: translateY(-2px);
 box-shadow: 0 16px 40px rgba(255, 161, 223, 0.35);
+}
+
+.hero-success {
+display: none;
+font-size: 15px;
+color: var(--pink-deep);
+font-weight: 600;
+opacity: 0;
+animation: revealUp 0.5s ease forwards;
+}
+
+.hero-success.show {
+display: block;
+}
+
+@media (max-width: 768px) {
+.hero-form { flex-direction: column; }
+.hero-form button { width: 100%; }
 }
 
 @keyframes revealUp {
@@ -642,7 +691,11 @@ footer span { color: var(--pink); }
   <div class="hero-content">
     <h1>Heavenly<br><em>Besties</em></h1>
     <p class="hero-desc">A women's faith community where real friendship meets real faith. Your seat at the table is waiting.</p>
-    <a href="#join" class="hero-cta">Join the Movement</a>
+    <div class="hero-form" id="heroForm">
+      <input type="email" id="heroEmail" placeholder="Enter your email">
+      <button onclick="handleHeroSignup()">Join Us</button>
+    </div>
+    <p class="hero-success" id="heroSuccess">Welcome to the movement! We'll be in touch.</p>
   </div>
 
 </section>
@@ -706,6 +759,53 @@ footer span { color: var(--pink); }
 </section>
 
 <script>
+async function handleHeroSignup() {
+  var email = document.getElementById('heroEmail').value;
+  var btn = document.querySelector('.hero-form button');
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    document.getElementById('heroEmail').style.borderColor = 'var(--pink-deep)';
+    return;
+  }
+
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+
+  try {
+    await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Y2jkNk', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
+      body: JSON.stringify({
+        data: {
+          type: 'subscription',
+          attributes: {
+            profile: {
+              data: {
+                type: 'profile',
+                attributes: {
+                  email: email,
+                  properties: { 'Source': 'Heavenly Besties Hero' }
+                }
+              }
+            },
+            custom_source: 'Heavenly Besties Website Hero'
+          },
+          relationships: {
+            list: { data: { type: 'list', id: 'XZzFni' } }
+          }
+        }
+      })
+    });
+  } catch (e) {}
+
+  document.getElementById('heroForm').style.display = 'none';
+  document.getElementById('heroSuccess').classList.add('show');
+}
+
+document.getElementById('heroEmail').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') handleHeroSignup();
+});
+
 async function handleSignup() {
   var email = document.getElementById('emailInput').value;
   var name = document.getElementById('nameInput').value;
