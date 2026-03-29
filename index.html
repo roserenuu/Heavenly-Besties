@@ -464,7 +464,7 @@ flex-wrap: nowrap;
 display: none;
 }
 .perk-card {
-flex: 0 0 200px;
+flex: 0 0 calc(50% - 20px);
 scroll-snap-align: center;
 background: rgba(255, 255, 255, 0.85);
 border: 1.5px solid var(--pink-soft);
@@ -481,10 +481,10 @@ justify-content: flex-start;
 padding: 10px 24px 20px;
 }
 .perk-card:first-child {
-margin-left: 24px;
+margin-left: 0;
 }
 .perk-card:last-child {
-margin-right: calc(50% - 100px);
+margin-right: 0;
 }
 }
 .perk-card h4 {
