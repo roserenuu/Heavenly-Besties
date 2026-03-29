@@ -450,21 +450,20 @@ margin-bottom: 40px;
 font-weight: 400;
 }
 .perks-grid {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+display: grid;
+grid-template-columns: 1fr 1fr;
 gap: 14px;
-max-width: 640px;
+max-width: 480px;
 margin: 0 auto;
 }
 .perk-card {
-display: inline-flex;
+display: flex;
 align-items: center;
-gap: 10px;
+justify-content: center;
 background: rgba(255, 255, 255, 0.8);
 border: 1.5px solid var(--pink-soft);
 border-radius: 100px;
-padding: 14px 28px;
+padding: 14px 24px;
 backdrop-filter: blur(10px);
 transition: all 0.3s ease;
 }
@@ -613,12 +612,12 @@ footer span { color: var(--pink); }
     <h2>Founding Member <em>Perks</em></h2>
     <p class="perks-sub">Join now and get exclusive access from day one</p>
     <div class="perks-grid">
-      <div class="perk-card"><span class="perk-icon">&#9889;</span><h4>Early Access</h4></div>
-      <div class="perk-card"><span class="perk-icon">&#10084;</span><h4>Exclusive Content</h4></div>
-      <div class="perk-card"><span class="perk-icon">&#9734;</span><h4>Private Community</h4></div>
-      <div class="perk-card"><span class="perk-icon">&#127881;</span><h4>Free Events</h4></div>
-      <div class="perk-card"><span class="perk-icon">&#128172;</span><h4>Your Voice Matters</h4></div>
-      <div class="perk-card"><span class="perk-icon">&#128081;</span><h4>Founding Title</h4></div>
+      <div class="perk-card"><h4>Early Access</h4></div>
+      <div class="perk-card"><h4>Exclusive Content</h4></div>
+      <div class="perk-card"><h4>Private Community</h4></div>
+      <div class="perk-card"><h4>Free Events</h4></div>
+      <div class="perk-card"><h4>Your Voice Matters</h4></div>
+      <div class="perk-card"><h4>Founding Title</h4></div>
     </div>
   </div>
 </section>
