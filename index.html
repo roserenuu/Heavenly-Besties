@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="A women's faith community where real friendship meets real faith. Your seat at the table is waiting.">
 
 <link rel="canonical" href="https://heavenlybesties.com">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,6 +58,46 @@ color: var(--black);
 
 html {
 min-height: 100%;
+}
+
+/* NAV */
+.nav {
+padding: 20px 32px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: transparent;
+position: relative;
+z-index: 10;
+}
+
+.nav-logo {
+font-family: 'Playfair Display', serif;
+font-size: 18px;
+font-weight: 700;
+color: var(--black);
+text-decoration: none;
+}
+
+.nav-logo em {
+font-style: italic;
+color: var(--pink);
+}
+
+.nav-link {
+font-size: 13px;
+font-weight: 600;
+color: var(--black);
+text-decoration: none;
+padding: 10px 24px;
+border: 1.5px solid var(--gray-200);
+border-radius: 60px;
+transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+border-color: var(--pink);
+color: var(--pink);
 }
 
 /* HERO */
@@ -488,6 +529,11 @@ footer span { color: var(--pink); }
 </head>
 <body>
 
+<nav class="nav">
+  <a href="#" class="nav-logo">Heavenly <em>Besties</em></a>
+  <a href="https://instagram.com/heavenlybesties" target="_blank" rel="noopener" class="nav-link">Follow Us</a>
+</nav>
+
 <section class="hero">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -534,6 +580,10 @@ footer span { color: var(--pink); }
     @heavenlybesties
   </a>
 </section>
+
+<footer>
+  &copy; 2026 Heavenly <span>Besties</span>. All rights reserved.
+</footer>
 
 <script>
 async function handleHeroSignup() {
