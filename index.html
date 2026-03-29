@@ -455,9 +455,10 @@ gap: 16px;
 overflow-x: auto;
 scroll-snap-type: x mandatory;
 -webkit-overflow-scrolling: touch;
-padding: 10px 24px 20px;
-margin: 0 -24px;
+padding: 10px 0 20px;
 scrollbar-width: none;
+justify-content: center;
+flex-wrap: nowrap;
 }
 .perks-grid::-webkit-scrollbar {
 display: none;
@@ -473,11 +474,18 @@ text-align: center;
 backdrop-filter: blur(10px);
 transition: all 0.3s ease;
 }
+
+@media (max-width: 768px) {
+.perks-grid {
+justify-content: flex-start;
+padding: 10px 24px 20px;
+}
 .perk-card:first-child {
 margin-left: calc(50% - 100px);
 }
 .perk-card:last-child {
 margin-right: calc(50% - 100px);
+}
 }
 .perk-card h4 {
 font-family: 'Playfair Display', serif;
