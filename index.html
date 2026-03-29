@@ -266,6 +266,15 @@ transform: translateY(-2px);
 box-shadow: 0 16px 40px rgba(255, 161, 223, 0.35);
 }
 
+.hero-verse {
+font-family: 'Playfair Display', serif;
+font-size: 13px;
+color: var(--gray-400);
+margin-top: 24px;
+opacity: 0;
+animation: revealUp 0.8s ease 0.4s forwards;
+}
+
 .hero-success {
 display: none;
 font-size: 15px;
@@ -555,6 +564,7 @@ footer span { color: var(--pink); }
       <button onclick="handleHeroSignup()">Join Us</button>
     </div>
     <p class="hero-success" id="heroSuccess">Welcome to the movement! We'll be in touch.</p>
+    <p class="hero-verse"><em>"Two are better than one, because they have a good reward for their toil."</em> — Ecclesiastes 4:9</p>
   </div>
 
 </section>
