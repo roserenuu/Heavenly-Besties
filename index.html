@@ -90,14 +90,15 @@ font-weight: 600;
 color: var(--black);
 text-decoration: none;
 padding: 10px 24px;
-border: 1.5px solid var(--gray-200);
+border: 2px solid transparent;
 border-radius: 60px;
 transition: all 0.3s ease;
+background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFDC80, #F77737, #E1306C, #C13584, #833AB4) border-box;
 }
 
 .nav-link:hover {
-border-color: var(--pink);
-color: var(--pink);
+transform: translateY(-2px);
+box-shadow: 0 8px 24px rgba(225, 48, 108, 0.2);
 }
 
 /* HERO */
